@@ -23,20 +23,5 @@ class admin_controller extends CI_Controller {
 		$this->load->view('admin/tambah_kepengurusan');
 	}
 
-	public function show_kepengurusan()
-	{
-		$this->load->view('admin/kepengurusan');
-	}
-
-	public function tambah_anggota()
-	{
-		$this->load->view('admin/input_anggota');
-	}
-
-	public function show_anggota()
-	{
-		$this->load->view('admin/anggota');
-	}
-
 }
 

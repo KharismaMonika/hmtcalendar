@@ -53,6 +53,7 @@ $route['default_controller'] = 'login_controller';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+
 //route baru
 //user
 $route['user'] = 'user_controller/dashboard';
@@ -69,10 +70,10 @@ $route['form_penilaian'] = 'user_controller/tambah_penilaian';
 $route['update_penilaian'] = 'user_controller/update_penilaian';
 
 //admin
-$route['admin'] = 'admin_controller/show_dashboard';
+//$route['admin'] = 'admin_controller/show_dashboard ';
 $route['list_departemen_admin'] = 'admin_controller/show_departemen';
 $route['tambah_departemen_admin'] = 'admin_controller/tambah_departemen';
-$route['tambah_kepengurusan_admin'] = 'admin_controller/tambah_kepengurusan';
-$route['list_kepengurusan_admin'] = 'admin_controller/show_kepengurusan';
-$route['list_anggota_admin'] = 'admin_controller/show_anggota';
-$route['tambah_anggota_admin'] = 'admin_controller/tambah_anggota';
+//$route['tambah_kepengurusan_admin'] = 'admin_controller/tambah_kepengurusan';
+
+$route['admin'] = 'kegiatan_controller/list_event_today';
+$route['tambah_kepengurusan_admin'] = 'kepengurusan_controller/input';

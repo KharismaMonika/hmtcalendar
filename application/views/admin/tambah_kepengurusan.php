@@ -220,23 +220,33 @@
                                     <div class="title-block">
                                         <h3 class="title"> Tambah Kepengurusan </h3>
                                     </div>
-                                    <form>
-                                        <div class="form-group"> <label class="control-label">Nama Kepengurusan</label> <input type="text" class="form-control boxed"> </div>
+
+                                   <!-- <form> -->
+                                        <?php echo form_open('kepengurusan_controller/input_kepengurusan'); ?>
+                                        <div class="form-group"> 
+                                            <label class="control-label">Nama Kepengurusan</label> 
+                                            <input name="nama_kepengurusan" type="text" class="form-control boxed" value=""> 
+                                        </div>
                                         <div class="form-inline">
                                               <label>Tahun Mulai</label><br>
-                                              <input type="number" min="1900" max="2099" step="1" value="Tahun Mulai" class="form-control"/>
+                                              <input name="tahun_mulai" type="number" min="1900" max="2099" value="" class="form-control"/>
                                         </div>
                                         <div class="form-inline">
                                               <label>Tahun Berakhir</label><br>
-                                              <input type="text" size="4" id="datepicker" class="form-control" />
+                                              <input name="tahun_berakhir" type="number" min="1900" max="2099" value="" class="form-control"/>
                                         </div>
                                         <br>
-                            <div class="form-group row">
-                                <div class="col-sm-10 col-sm-offset-2"> <button type="submit" class="btn btn-primary">
-                    Tambah
-                </button> </div>
-                            </div>
-                                    </form>
+                                        <div class="form-group row">
+                                            <div class="col-sm-10 col-sm-offset-2"> 
+                                            <!-- <button type="submit" class="btn btn-primary">Tambah</button> -->
+                                            <?php echo form_submit('submit', 'Tambah', array('class'=> 'btn btn-primary') ); ?> 
+
+                                            </div> 
+
+                                        </div>
+                                        <?php echo form_close(''); ?>
+                                    <!-- </form> -->
+
                                 </div>
                             </div>
                         </div>

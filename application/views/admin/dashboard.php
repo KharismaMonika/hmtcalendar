@@ -215,6 +215,7 @@
                                 <div class="card" id="table-right">
                                     <div class="card-block">
                                         <section class="example">
+
                                             <table class="table table-bordered">
                                                 <thead>
                                                     <tr>
@@ -223,24 +224,26 @@
                                                         <th style="width: 15%">Tempat</th>
                                                     </tr>
                                                 </thead>
+
                                                 <tbody>
-                                                    <tr>
-                                                        <td style="text-align: center">Mark</td>
-                                                        <td>Otto</td>
-                                                        <td style="text-align: center">@mdo</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="text-align: center">Jacob</td>
-                                                        <td>Thornton</td>
-                                                        <td style="text-align: center">@fat</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="text-align: center">Larry</td>
-                                                        <td>the Bird</td>
-                                                        <td style="text-align: center">@twitter</td>
-                                                    </tr>
+
+                                                    <?php 
+                                                        foreach ($listevent as $row)
+                                                         {
+                                                            echo "
+                                                                <tr>
+                                                                    <td >$row->jam_mulai - $row->jam_selesai </td>
+                                                                    <td>$row->nama_event</td>
+                                                                    <td >$row->tempat </td>
+                                                                </tr>
+                                                            ";
+                                                        }
+                                                    ?>  
                                                 </tbody>
+
                                             </table>
+
+
                                         </section>
                                     </div>
                                 </div>
